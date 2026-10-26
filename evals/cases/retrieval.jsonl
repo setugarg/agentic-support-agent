@@ -1,0 +1,25 @@
+{"query":"how many days do I have to get my money back","expected":"returns-and-refunds#0"}
+{"query":"refund over 100 dollars approval","expected":"returns-and-refunds#1"}
+{"query":"how long until the refund shows up on my card","expected":"returns-and-refunds#2"}
+{"query":"can I return a gift card","expected":"returns-and-refunds#3"}
+{"query":"cancel an order that has not shipped yet","expected":"returns-and-refunds#4"}
+{"query":"refund just one item from my order","expected":"returns-and-refunds#5"}
+{"query":"overnight shipping cost","expected":"shipping#0"}
+{"query":"which carriers do you use","expected":"shipping#1"}
+{"query":"tracking number not updating","expected":"shipping#2"}
+{"query":"my package is lost","expected":"shipping#3"}
+{"query":"do you ship to canada","expected":"shipping#4"}
+{"query":"lifetime warranty on summit gear products","expected":"warranty#0"}
+{"query":"warranty for other brands","expected":"warranty#1"}
+{"query":"broken tent pole","expected":"warranty#2"}
+{"query":"how to file a warranty claim","expected":"warranty#3"}
+{"query":"can you look up my friend's order","expected":"account-and-privacy#0"}
+{"query":"change my email address","expected":"account-and-privacy#1"}
+{"query":"delete my account data","expected":"account-and-privacy#3"}
+{"query":"how do I earn points","expected":"membership#0"}
+{"query":"do reward certificates expire","expected":"membership#1"}
+{"query":"what are your support hours","expected":"support-hours-and-escalation#0"}
+{"query":"when do you hand me to a human","expected":"support-hours-and-escalation#1"}
+{"query":"high priority ticket response time","expected":"support-hours-and-escalation#2"}
+{"query":"I got charged but the box never arrived","expected":"shipping#3"}
+{"query":"I want my cash back for the jacket","expected":"returns-and-refunds#0"}

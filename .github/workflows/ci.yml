@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      # Unit tests: tools, policy rules, authz, agent loop (scripted fake LLM) - free and deterministic
+      - name: Build and unit test
+        run: mvn -B -q install
+      # Retrieval eval: BM25 recall@k on a labelled query set - free, no API key needed
+      - name: Retrieval eval
+        run: mvn -B -q -pl evals exec:java -Dexec.args="--retrieval-only"
+      # CDK synth catches IaC errors before anyone runs a deploy
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: CDK synth
+        working-directory: infra
+        run: npx -y aws-cdk@2.1146.1 synth --quiet
+        env:
+          CDK_DEFAULT_ACCOUNT: "000000000000"
+          CDK_DEFAULT_REGION: us-west-2

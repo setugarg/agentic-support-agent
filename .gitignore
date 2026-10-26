@@ -1,0 +1,11 @@
+target/
+infra/cdk.out/
+*.iml
+.idea/
+.vscode/
+.DS_Store
+evals/reports/*
+!evals/reports/.gitkeep
+!evals/reports/baseline-*.md
+.env
+cdk-outputs.json

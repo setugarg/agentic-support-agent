@@ -1,0 +1,14 @@
+{
+  "app": "mvn -q -e exec:java",
+  "watch": {
+    "include": ["src/main/**"]
+  },
+  "context": {
+    "modelId": "claude-haiku-5-5",
+    "llmProvider": "anthropic",
+    "effort": "low",
+    "dailyRequestCap": "300",
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:target-partitions": ["aws"]
+  }
+}
